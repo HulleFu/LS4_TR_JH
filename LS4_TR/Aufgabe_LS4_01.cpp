@@ -32,11 +32,19 @@
 //		───────╚═╝─────────╚═╝
 // ---------------------------------------------------
 
+#include <iostream>
+#include <cstdlib>
+#include <locale>
+#include <Windows.h>
+
+#include "Aufgabe_LS4_01_Interaktion.h"
+#include "Aufgabe_LS4_01_GrundRechenArten.h"
+#include "Aufgabe_LS4_01_Trigonometrie.h"
 
 
 
 
 int main()
 {
-
+	menu();
 }

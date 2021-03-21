@@ -24,3 +24,7 @@
 //				Erstellt:				20.03.2021
 //				Letzte Änderung:		open end
 //
+
+int menu();
+int grundrechenarten();
+int trigonometrie();

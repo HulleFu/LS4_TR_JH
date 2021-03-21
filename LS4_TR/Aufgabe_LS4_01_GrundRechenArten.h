@@ -24,3 +24,9 @@
 //				Erstellt:				20.03.2021
 //				Letzte Änderung:		open end
 //
+
+
+double Addition(double z1, double z2);
+double Subtraktion(double z1, double z2);
+double Multiplikation(double z1, double z2);
+double Division(double z1, double z2);
