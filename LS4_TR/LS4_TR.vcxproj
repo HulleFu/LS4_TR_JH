@@ -140,6 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Aufgabe_LS4_01.cpp" />
+    <ClCompile Include="Aufgabe_LS4_01_GrundRechenArten.cpp" />
+    <ClCompile Include="Aufgabe_LS4_01_Interaktion.cpp" />
+    <ClCompile Include="Aufgabe_LS4_01_Trigonometrie.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aufgabe_LS4_01_GrundRechenArten.h" />
+    <ClInclude Include="Aufgabe_LS4_01_Interaktion.h" />
+    <ClInclude Include="Aufgabe_LS4_01_Trigonometrie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

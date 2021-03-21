@@ -1,4 +1,5 @@
-﻿//
+﻿#pragma once
+//
 // 
 //		████████╗███████╗░█████╗░███╗░░░███╗  ████████╗██╗░░░██╗██████╗░██████╗░░█████╗░
 //		╚══██╔══╝██╔════╝██╔══██╗████╗░████║  ╚══██╔══╝██║░░░██║██╔══██╗██╔══██╗██╔══██╗
@@ -13,30 +14,13 @@
 //		Inhalt:
 //				Einordnung:				FS-LF5-LS4
 //				Projekt:				Aufgabe_ls4_01
-//				Thema:					Messwertauswertung mit SimSTB
+//				Thema:					Modularar Taschenrechner
 //
 //		Autor:	
-//				Name:					Lena de Vries, Julian Weber, Domenic Schings???, Raphael Comoth, Jan Haag
+//				Name:					Jan Haag
 //				Klasse:					FS-ETTZ-91
 //
 //		Datum:		
 //				Erstellt:				20.03.2021
 //				Letzte Änderung:		open end
 //
-// ---------------------------------------------------
-//  Jans's TR Branch
-//		╔══╦╗
-//		║═╦╬╬═╦╦═╦═╦╦╗╔╦╦╦═╦═╗
-//		║╔╝║║║║║╬║╩╣╔╝║║║║╩╣╬║
-//		╚╝─╚╩╩═╬╗╠═╩╝─╚══╩═╬╗║
-//		───────╚═╝─────────╚═╝
-// ---------------------------------------------------
-
-
-
-
-
-int main()
-{
-
-}

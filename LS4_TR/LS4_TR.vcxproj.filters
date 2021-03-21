@@ -18,5 +18,25 @@
     <ClCompile Include="Aufgabe_LS4_01.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Aufgabe_LS4_01_GrundRechenArten.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Aufgabe_LS4_01_Interaktion.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Aufgabe_LS4_01_Trigonometrie.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aufgabe_LS4_01_GrundRechenArten.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Aufgabe_LS4_01_Trigonometrie.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Aufgabe_LS4_01_Interaktion.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
