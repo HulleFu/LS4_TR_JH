@@ -33,7 +33,7 @@ double sinus(double z1)
 {
 	double result;
 
-	result = sin(z1);
+	result = sin(z1 * M_PI/180.0);
 
 	return result;
 }
@@ -42,7 +42,7 @@ double cosinus(double z1)
 {
 	double result;
 
-	result = cos(z1);
+	result = cos(z1 * M_PI / 180.0);
 
 	return result;
 }
@@ -51,7 +51,7 @@ double tangens(double z1)
 {
 	double result;
 
-	result = tan(z1);
+	result = tan(z1 * M_PI / 180.0);
 
 	return result;
 }
@@ -60,7 +60,7 @@ double arcsinus(double z1)
 {
 	double result;
 
-	result = acos(z1);
+	result = asin(z1) * 180.0 / M_PI;
 
 	return result;
 }
@@ -69,7 +69,7 @@ double arccosinus(double z1)
 {
 	double result;
 
-	result = acos(z1);
+	result = acos(z1) * 180.0 / M_PI;
 
 	return result;
 }
@@ -78,7 +78,7 @@ double arctangens(double z1)
 {
 	double result;
 
-	result =  atan(z1);
+	result =  atan(z1) * 180.0 / M_PI;
 
 	return result;
 }

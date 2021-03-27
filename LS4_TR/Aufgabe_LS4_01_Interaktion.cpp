@@ -80,7 +80,7 @@ double TRechnung(string funct)
 	double result;
 	cout << tmap[funct] << " ausgewählt. \n";
 	result = fmap[funct](eingabe("eine"));
-	cout << "Das Ergebnis der " << tmap[funct] << " lautet:" << result << endl;
+	cout << "Das Ergebnis der " << tmap[funct] << "Funktion lautet:" << result << endl;
 	cout << endl;
 	return 0;
 }
