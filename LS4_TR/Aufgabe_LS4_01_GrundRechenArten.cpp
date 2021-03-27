@@ -33,7 +33,7 @@
 using namespace std;
 
 
-double Addition(double z1, double z2)
+double addition(double z2, double z1)
 {
 	double result;
 
@@ -42,7 +42,7 @@ double Addition(double z1, double z2)
 	return result;
 }
 
-double Subtraktion(double z1, double z2)
+double subtraktion(double z2, double z1)
 {
 	double result;
 
@@ -51,7 +51,7 @@ double Subtraktion(double z1, double z2)
 	return result;
 }
 
-double Multiplikation(double z1, double z2)
+double multiplikation(double z2, double z1)
 {
 	double result;
 
@@ -60,7 +60,7 @@ double Multiplikation(double z1, double z2)
 	return result;
 }
 
-double Division(double z1, double z2)
+double division(double z2, double z1)
 {
 	double result;
 

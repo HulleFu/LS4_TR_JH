@@ -26,116 +26,74 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <locale>
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include <map>
+#include <string>
 #include "Aufgabe_LS4_01_Interaktion.h"
+#include "Aufgabe_LS4_01_GrundRechenArten.h"
+#include "Aufgabe_LS4_01_Trigonometrie.h"
 
 using namespace std;
 
 
-int menu()
+
+double GRechnung(string funct)
 {
-	int hauptmenu;
-	
+	typedef double(*fnptr)(double, double);
+	map<string, fnptr> fmap;
+	fmap["add"] = addition;
+	fmap["sub"] = subtraktion;
+	fmap["mul"] = multiplikation;
+	fmap["div"] = division;
+	map<string, string> tmap;
+	tmap["add"] = "Addition";
+	tmap["sub"] = "Subtraktion";
+	tmap["mul"] = "Multiplikation";
+	tmap["div"] = "Division";
+	double result;
+	cout << tmap[funct] << " ausgewählt. \n";
+	result = fmap[funct](eingabe("die zweite"), eingabe("die erste"));
+	cout << "Das Ergebnis der " << tmap[funct] << " lautet:" << result << endl;
+	cout << endl;
+	return 0;
+}
 
-	do
-	{
-		cout << " 0. Beenden \n 1. Grundrechenarten \n 2. Trigonometrie \n ";
-		cin >> hauptmenu;
-
-		switch (hauptmenu)
-		{
-			case 0:														//Beenden
-
-				return 0;
-				break;
-			case 1:														//Grundrechenarten
-				cout << "Grundrechenarten ausgewählt. \n";
-				cout << "Bitte wählen sie eine der Rechenoperationen. \n";
-				grundrechenarten();
-				break;
-			case 2:														//Trigonometrie
-				cout << "Trigonometrie ausgewählt. \n";
-				cout << "Bitte wählen sie eine der Rechenoperationen. \n";
-				trigonometrie();
-				break;
-		}		
-
-	} while (hauptmenu != 0);
-
+double TRechnung(string funct)
+{
+	typedef double(*fnptr)(double);
+	map<string, fnptr> fmap;
+	fmap["sin"] = sinus;
+	fmap["cos"] = cosinus;
+	fmap["tan"] = tangens;
+	fmap["asin"] = arcsinus;
+	fmap["acos"] = arccosinus;
+	fmap["atan"] = arctangens;
+	map<string, string> tmap;
+	tmap["sin"] = "Sinus";
+	tmap["cos"] = "Cosinus";
+	tmap["tan"] = "Tangens";
+	tmap["asin"] = "Arcus Sinus";
+	tmap["acos"] = "Arcus Cosinus";
+	tmap["atan"] = "Arcus Tangens";
+	double result;
+	cout << tmap[funct] << " ausgewählt. \n";
+	result = fmap[funct](eingabe("eine"));
+	cout << "Das Ergebnis der " << tmap[funct] << " lautet:" << result << endl;
+	cout << endl;
+	return 0;
 }
 
 
-int grundrechenarten()
+
+double eingabe(string input)
 {
-	int untermenu;
-	do
-	{
-		cout << " 0. Beenden \n 1. Addition \n 2. Subtraktion \n 3. Multiplikation \n 4. Division \n ";
-		
-		cin >> untermenu;
+	double zahl;
 
-		switch (untermenu)
-		{
-			case 0:	//Beenden
-				cout << "Beenden";
-				return 0;
-				break;
-			case 1:	//Addition
-				cout << "Addition ausgewählt. \n";
-				break;
-			case 2:	//Subtraktion
-				cout << "Subtraktion ausgewählt. \n";
-				break;
-			case 3:	//Multiplikation
-				cout << "Multiplikation ausgewählt. \n";
-				break;
-			case 4:	//Division
-				cout << "Division ausgewählt. \n";
-				break;
-		}
-	} 	while (untermenu != 0);
+	cout << "Bitte geben sie "<< input <<" Zahl ein\n";
 
-}
+	cin >> zahl;
 
-
-int trigonometrie()
-{
-	int untermenu;
-	do
-	{
-		cout << " 0. Beenden \n 1. Sinus \n 2. Cosinus \n 3. Tangens \n";
-		cout << " 4. Arcus Sinus \n 5. Arcus Cosinus \n 6. Arcus Tangens \n";
-
-		cin >> untermenu;
-
-		switch (untermenu)
-		{
-		case 0:	//Beenden
-			cout << "Beenden";
-			return 0;
-			break;
-		case 1:	//Sinus
-			cout << "Sinus ausgewählt. \n";
-			break;
-		case 2:	//Cosinus
-			cout << "Cosinus ausgewählt. \n";
-			break;
-		case 3:	//Tangens
-			cout << "Tangens ausgewählt. \n";
-			break;
-		case 4:	//Arcus Sinus
-			cout << "Arcus Sinus ausgewählt. \n";
-			break;
-		case 5:	//Arcus Cosinus
-			cout << "Arcus Cosinus ausgewählt. \n";
-			break;
-		case 6:	//Arcus Tangens
-			cout << "Arcus Tangens ausgewählt. \n";
-			break;
-		}
-
-	} 	while (untermenu != 0);
-
-
+	return zahl;
 }

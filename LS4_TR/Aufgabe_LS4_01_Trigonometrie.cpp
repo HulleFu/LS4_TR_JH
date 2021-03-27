@@ -28,3 +28,58 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include "Aufgabe_LS4_01_Trigonometrie.h"
+
+double sinus(double z1)
+{
+	double result;
+
+	result = sin(z1);
+
+	return result;
+}
+
+double cosinus(double z1)
+{
+	double result;
+
+	result = cos(z1);
+
+	return result;
+}
+
+double tangens(double z1)
+{
+	double result;
+
+	result = tan(z1);
+
+	return result;
+}
+
+double arcsinus(double z1)
+{
+	double result;
+
+	result = acos(z1);
+
+	return result;
+}
+
+double arccosinus(double z1)
+{
+	double result;
+
+	result = acos(z1);
+
+	return result;
+}
+
+double arctangens(double z1)
+{
+	double result;
+
+	result =  atan(z1);
+
+	return result;
+}
+

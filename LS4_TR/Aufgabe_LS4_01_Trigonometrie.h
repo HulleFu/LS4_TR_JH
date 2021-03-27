@@ -24,3 +24,10 @@
 //				Erstellt:				20.03.2021
 //				Letzte Änderung:		open end
 //
+
+double sinus(double z1);
+double cosinus(double z1);
+double tangens(double z1);
+double arcsinus(double z1);
+double arccosinus(double z1);
+double arctangens(double z1);

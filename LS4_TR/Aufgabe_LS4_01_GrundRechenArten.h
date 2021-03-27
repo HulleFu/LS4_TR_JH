@@ -26,7 +26,7 @@
 //
 
 
-double Addition(double z1, double z2);
-double Subtraktion(double z1, double z2);
-double Multiplikation(double z1, double z2);
-double Division(double z1, double z2);
+double addition(double z2, double z1);
+double subtraktion(double z2, double z1);
+double multiplikation(double z2, double z1);
+double division(double z2, double z1);

@@ -25,6 +25,9 @@
 //				Letzte Änderung:		open end
 //
 
-int menu();
-int grundrechenarten();
-int trigonometrie();
+using namespace std;
+
+double eingabe(string input);
+double GRechnung(string funct);
+double TRechnung(string funct);
+
