@@ -28,6 +28,6 @@
 using namespace std;
 
 double eingabe(string input);
-double GRechnung(string funct);
+double GRechnung(string funct, map<string, fpoint> fmap, map<string, string> tmap);
 double TRechnung(string funct);
 

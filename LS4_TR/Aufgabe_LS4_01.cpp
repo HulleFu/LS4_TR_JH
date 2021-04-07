@@ -46,15 +46,22 @@
 
 using namespace std;
 
+typedef double(*fnptr)(double, double);
+map<string, fnptr> fmap;
+map<string, string> tmap;
 
 int grundrechenarten();
 int trigonometrie();
+void createmap();
 
 
 
 int main()
 {
 	locale::global(locale("German_germany"));
+
+	void createmap();
+
 	int hauptmenu;
 
 
@@ -102,7 +109,7 @@ int grundrechenarten()
 			return 0;
 			break;
 		case 1:															//Addition
-			GRechnung("add");
+			GRechnung("add", fmap, tmap);
 			break;
 		case 2:															//Subtraktion
 			GRechnung("sub");
@@ -161,3 +168,16 @@ int trigonometrie()
 
 }
 
+void createmap()
+{
+	
+	fmap["add"] = addition;
+	fmap["sub"] = subtraktion;
+	fmap["mul"] = multiplikation;
+	fmap["div"] = division;
+	
+	tmap["add"] = "Addition";
+	tmap["sub"] = "Subtraktion";
+	tmap["mul"] = "Multiplikation";
+	tmap["div"] = "Division";
+}

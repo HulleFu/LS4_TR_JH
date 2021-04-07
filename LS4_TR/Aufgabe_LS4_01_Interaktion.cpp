@@ -36,22 +36,12 @@
 #include "Aufgabe_LS4_01_Trigonometrie.h"
 
 using namespace std;
+typedef double(*fpoint)(double, double);
 
 
 
-double GRechnung(string funct)
+double GRechnung(string funct, map<string, fpoint> fmap, map<string, string> tmap)
 {
-	typedef double(*fnptr)(double, double);
-	map<string, fnptr> fmap;
-	fmap["add"] = addition;
-	fmap["sub"] = subtraktion;
-	fmap["mul"] = multiplikation;
-	fmap["div"] = division;
-	map<string, string> tmap;
-	tmap["add"] = "Addition";
-	tmap["sub"] = "Subtraktion";
-	tmap["mul"] = "Multiplikation";
-	tmap["div"] = "Division";
 	double result;
 	cout << tmap[funct] << " ausgewählt. \n";
 	result = fmap[funct](eingabe("die zweite"), eingabe("die erste"));
