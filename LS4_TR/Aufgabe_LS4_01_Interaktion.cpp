@@ -41,8 +41,8 @@ using namespace std;
 double GRechnung(string funct, map<string, fnptr2> fmap, map<string, string> tmap)
 {
 	double result;
-	cout << tmap[funct] << " ausgewählt. \n";
-	result = fmap[funct](eingabe("die zweite"), eingabe("die erste"));
+	cout << tmap[funct] << " ausgewählt. \n \n";
+	result = fmap[funct](eingabe("die zweite Zahl"), eingabe("die erste Zahl"));
 	cout << "Das Ergebnis der " << tmap[funct] << " lautet:" << result << endl;
 	cout << endl;
 	return 0;
@@ -51,8 +51,15 @@ double GRechnung(string funct, map<string, fnptr2> fmap, map<string, string> tma
 double TRechnung(string funct, map<string, fnptr1> fmap, map<string, string> tmap)
 {
 	double result;
-	cout << tmap[funct] << " ausgewählt. \n";
-	result = fmap[funct](eingabe("eine"));
+	cout << tmap[funct] << " ausgewählt. \n \n";
+	if (funct == "sin" || "cos" || "tan")
+	{
+		result = fmap[funct](eingabe("einen Winkel"));
+	}
+	else
+	{
+		result = fmap[funct](eingabe("eine Zahl zwischen -1 und 1"));
+	}
 	cout << "Das Ergebnis der " << tmap[funct] << "Funktion lautet:" << result << endl;
 	cout << endl;
 	return 0;
@@ -64,7 +71,7 @@ double eingabe(string input)
 {
 	double zahl;
 
-	cout << "Bitte geben sie "<< input <<" Zahl ein\n";
+	cout << "Bitte geben sie "<< input <<" ein.\n";
 
 	cin >> zahl;
 

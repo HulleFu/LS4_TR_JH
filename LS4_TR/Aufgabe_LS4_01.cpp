@@ -16,7 +16,7 @@
 //				Thema:					
 //
 //		Autor:	
-//				Name:					Lena de Vries, Julian Weber, Domenic Schings, Raphael Comoth, Jan Haag
+//				Name:					Jan Haag
 //				Klasse:					FS-ETTZ-91
 //
 //		Datum:		
@@ -86,11 +86,13 @@ int main()
 
 	int hauptmenu;
 
-
 	do
 	{
+		cout << "Hauptmenu:\n";
 		cout << " 0. Beenden \n 1. Grundrechenarten \n 2. Trigonometrie \n ";
+		cout << "Auswahl: ";
 		cin >> hauptmenu;
+		cout << endl;
 
 		switch (hauptmenu)
 		{
@@ -98,13 +100,11 @@ int main()
 			return 0;
 			break;
 		case 1:														//Grundrechenarten
-			cout << "Grundrechenarten ausgewählt. \n";
-			cout << "Bitte wählen sie eine der Rechenoperationen. \n";
+			cout << "Grundrechenarten ausgewählt. \n \n";
 			grundrechenarten();
 			break;
 		case 2:														//Trigonometrie
-			cout << "Trigonometrie ausgewählt. \n";
-			cout << "Bitte wählen sie eine der Rechenoperationen. \n";
+			cout << "Trigonometrie ausgewählt. \n \n";
 			trigonometrie();
 			break;
 		}
@@ -120,14 +120,16 @@ int grundrechenarten()
 
 	do
 	{
+		cout << "Bitte wählen sie eine der Rechenoperationen. \n";
 		cout << " 0. Beenden \n 1. Addition \n 2. Subtraktion \n 3. Multiplikation \n 4. Division \n ";
-
+		cout << "Auswahl: ";
 		cin >> untermenu;
+		cout << endl;
 
 		switch (untermenu)
 		{
 		case 0:															//Beenden
-			cout << "Beenden";
+			cout << "Beenden\n \n";
 			return 0;
 			break;
 		case 1:															//Addition
@@ -154,15 +156,17 @@ int trigonometrie()
 	int untermenu;
 	do
 	{
+		cout << "Bitte wählen sie eine der Rechenoperationen. \n";
 		cout << " 0. Beenden \n 1. Sinus \n 2. Cosinus \n 3. Tangens \n";
 		cout << " 4. Arcus Sinus \n 5. Arcus Cosinus \n 6. Arcus Tangens \n";
-
+		cout << "Auswahl: ";
 		cin >> untermenu;
+		cout << endl;
 
 		switch (untermenu)
 		{
 		case 0:															//Beenden
-			cout << "Beenden";
+			cout << "Beenden\n \n";
 			return 0;
 			break;
 		case 1:															//Sinus
