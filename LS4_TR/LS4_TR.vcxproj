@@ -148,6 +148,7 @@
     <ClInclude Include="Aufgabe_LS4_01_GrundRechenArten.h" />
     <ClInclude Include="Aufgabe_LS4_01_Interaktion.h" />
     <ClInclude Include="Aufgabe_LS4_01_Trigonometrie.h" />
+    <ClInclude Include="Aufgabe_LS4_01_config.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

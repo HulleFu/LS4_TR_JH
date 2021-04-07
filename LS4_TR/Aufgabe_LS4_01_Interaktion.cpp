@@ -34,13 +34,11 @@
 #include "Aufgabe_LS4_01_Interaktion.h"
 #include "Aufgabe_LS4_01_GrundRechenArten.h"
 #include "Aufgabe_LS4_01_Trigonometrie.h"
+#include "Aufgabe_LS4_01_config.h"
 
 using namespace std;
-typedef double(*fpoint)(double, double);
 
-
-
-double GRechnung(string funct, map<string, fpoint> fmap, map<string, string> tmap)
+double GRechnung(string funct, map<string, fnptr2> fmap, map<string, string> tmap)
 {
 	double result;
 	cout << tmap[funct] << " ausgewählt. \n";
@@ -50,23 +48,8 @@ double GRechnung(string funct, map<string, fpoint> fmap, map<string, string> tma
 	return 0;
 }
 
-double TRechnung(string funct)
+double TRechnung(string funct, map<string, fnptr1> fmap, map<string, string> tmap)
 {
-	typedef double(*fnptr)(double);
-	map<string, fnptr> fmap;
-	fmap["sin"] = sinus;
-	fmap["cos"] = cosinus;
-	fmap["tan"] = tangens;
-	fmap["asin"] = arcsinus;
-	fmap["acos"] = arccosinus;
-	fmap["atan"] = arctangens;
-	map<string, string> tmap;
-	tmap["sin"] = "Sinus";
-	tmap["cos"] = "Cosinus";
-	tmap["tan"] = "Tangens";
-	tmap["asin"] = "Arcus Sinus";
-	tmap["acos"] = "Arcus Cosinus";
-	tmap["atan"] = "Arcus Tangens";
 	double result;
 	cout << tmap[funct] << " ausgewählt. \n";
 	result = fmap[funct](eingabe("eine"));

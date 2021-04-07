@@ -27,7 +27,10 @@
 #include <cstdlib>
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include "Aufgabe_LS4_01_Interaktion.h"
 #include "Aufgabe_LS4_01_GrundRechenArten.h"
+#include "Aufgabe_LS4_01_Trigonometrie.h"
+#include "Aufgabe_LS4_01_config.h"
 
 
 using namespace std;

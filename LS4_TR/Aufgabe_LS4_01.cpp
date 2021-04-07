@@ -13,7 +13,7 @@
 //		Inhalt:
 //				Einordnung:				FS-LF5-LS4
 //				Projekt:				Aufgabe_ls4_01
-//				Thema:					Messwertauswertung mit SimSTB
+//				Thema:					
 //
 //		Autor:	
 //				Name:					Lena de Vries, Julian Weber, Domenic Schings, Raphael Comoth, Jan Haag
@@ -42,25 +42,47 @@
 #include "Aufgabe_LS4_01_Interaktion.h"
 #include "Aufgabe_LS4_01_GrundRechenArten.h"
 #include "Aufgabe_LS4_01_Trigonometrie.h"
+#include "Aufgabe_LS4_01_config.h"
+
 
 
 using namespace std;
 
-typedef double(*fnptr)(double, double);
-map<string, fnptr> fmap;
+typedef double(*fnptr2)(double, double);
+typedef double(*fnptr1)(double);
+map<string, fnptr2> gfmap;
+map<string, fnptr1> tfmap;
 map<string, string> tmap;
 
 int grundrechenarten();
 int trigonometrie();
-void createmap();
-
 
 
 int main()
 {
 	locale::global(locale("German_germany"));
+		
+	gfmap["add"] = &addition;										//Map zuordnen
+	gfmap["sub"] = &subtraktion;
+	gfmap["mul"] = &multiplikation;
+	gfmap["div"] = &division;
+	tfmap["sin"] = sinus;
+	tfmap["cos"] = cosinus;
+	tfmap["tan"] = tangens;
+	tfmap["asin"] = arcsinus;
+	tfmap["acos"] = arccosinus;
+	tfmap["atan"] = arctangens;
 
-	void createmap();
+	tmap["add"] = "Addition";
+	tmap["sub"] = "Subtraktion";
+	tmap["mul"] = "Multiplikation";
+	tmap["div"] = "Division";
+	tmap["sin"] = "Sinus";
+	tmap["cos"] = "Cosinus";
+	tmap["tan"] = "Tangens";
+	tmap["asin"] = "Arcus Sinus";
+	tmap["acos"] = "Arcus Cosinus";
+	tmap["atan"] = "Arcus Tangens";
 
 	int hauptmenu;
 
@@ -109,16 +131,16 @@ int grundrechenarten()
 			return 0;
 			break;
 		case 1:															//Addition
-			GRechnung("add", fmap, tmap);
+			GRechnung("add", gfmap, tmap);
 			break;
 		case 2:															//Subtraktion
-			GRechnung("sub");
+			GRechnung("sub", gfmap, tmap);
 			break;
 		case 3:															//Multiplikation
-			GRechnung("mul");
+			GRechnung("mul", gfmap, tmap);
 			break;
 		case 4:															//Division
-			GRechnung("div");
+			GRechnung("div", gfmap, tmap);
 			break;
 		}
 	} while (untermenu != 0);
@@ -144,40 +166,26 @@ int trigonometrie()
 			return 0;
 			break;
 		case 1:															//Sinus
-			TRechnung("sin");
+			TRechnung("sin", tfmap, tmap);
 			break;
 		case 2:															//Cosinus
-			TRechnung("cos");
+			TRechnung("cos", tfmap, tmap);
 			break;
 		case 3:															//Tangens
-			TRechnung("tan");
+			TRechnung("tan", tfmap, tmap);
 			break;
 		case 4:															//Arcus Sinus
-			TRechnung("asin");
+			TRechnung("asin", tfmap, tmap);
 			break;
 		case 5:															//Arcus Cosinus
-			TRechnung("acos");
+			TRechnung("acos", tfmap, tmap);
 			break;
 		case 6:															//Arcus Tangens
-			TRechnung("atan");
+			TRechnung("atan", tfmap, tmap);
 			break;
 		}
 
 	} while (untermenu != 0);
 
 
-}
-
-void createmap()
-{
-	
-	fmap["add"] = addition;
-	fmap["sub"] = subtraktion;
-	fmap["mul"] = multiplikation;
-	fmap["div"] = division;
-	
-	tmap["add"] = "Addition";
-	tmap["sub"] = "Subtraktion";
-	tmap["mul"] = "Multiplikation";
-	tmap["div"] = "Division";
 }

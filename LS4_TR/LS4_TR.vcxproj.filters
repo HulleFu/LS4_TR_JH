@@ -38,5 +38,8 @@
     <ClInclude Include="Aufgabe_LS4_01_Interaktion.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="Aufgabe_LS4_01_config.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
